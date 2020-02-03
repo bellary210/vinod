@@ -1,0 +1,52 @@
+tomcat installation
+useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat
+wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.32/bin/apache-tomcat-8.0.32.tar.gz
+sudo tar xf apache-tomcat-8.0.32.tar.gz -C /opt/tomcat
+sudo chown -RH root: /opt/tomcat
+sudo chmod -R 755 tomcat
+sudo nano /etc/systemd/system/tomcat.service
+[Unit]
+Description=Tomcat 8 servlet container
+After=network.target
+
+[Service]
+Type=forking
+
+User=tomcat
+Group=tomcat
+
+Environment="JAVA_HOME=/usr/lib/jvm/default-java"
+Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom -Djava.awt.headless=true"
+
+Environment="CATALINA_BASE=/opt/tomcat"
+Environment="CATALINA_HOME=/opt/tomcat"
+Environment="CATALINA_PID=/opt/tomcat/temp/tomcat.pid"
+Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
+sudo systemctl start tomcat
+<user username="root" password="root" roles="admin-gui,manager-gui,manager-script,manager-status"/>
+then do changes in 
+user.xml
+manager
+hostmanager
+<Context antiResourceLocking="false" privileged="true" >
+<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?Ha$
+</Context>
+
+
+
+
+jenkins
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt install oracle-java8-installer
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo apt-add-repository "deb https://pkg.jenkins.io/debian-stable binary/"
+sudo apt install jenkins

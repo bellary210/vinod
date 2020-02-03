@@ -1,0 +1,133 @@
+#!/bin/bash 
+
+docker tag ojas-obs-customercontract  raghavareddy/raghava:customercontract
+docker push raghavareddy/raghava:customercontract
+docker tag ojas-obs-psa-customercontactinfo  raghavareddy/raghava:customercontactinfo
+docker push raghavareddy/raghava:customercontactinfo
+docker tag ojas-obs-customer-info  raghavareddy/raghava:customer-info
+docker push raghavareddy/raghava:customer-info
+docker tag ojas-obs-documenttype  raghavareddy/raghava:documenttype
+docker push raghavareddy/raghava:documenttype
+docker tag ojas-obs-document-stage  raghavareddy/raghava:document-stage
+docker push raghavareddy/raghava:document-stage
+docker tag ojas-obs-geo  raghavareddy/raghava:geo
+docker push raghavareddy/raghava:geo
+docker tag ojas-obs-sez-location  raghavareddy/raghava:sez-location
+docker push raghavareddy/raghava:sez-location
+docker tag ojas-obs-gst-location  raghavareddy/raghava:gst-location
+docker push raghavareddy/raghava:gst-location
+docker tag ojas-obs-country  raghavareddy/raghava:country
+docker push raghavareddy/raghava:country
+docker tag ojas-obs-contractcompany  raghavareddy/raghava:contractcompany
+docker push raghavareddy/raghava:contractcompany
+docker tag ojas-obs-sez  raghavareddy/raghava:sez
+docker push raghavareddy/raghava:sez
+docker tag ojas-obs-rate_type  raghavareddy/raghava:rate_type
+docker push raghavareddy/raghava:rate_type
+docker tag ojas-obs-service-type  raghavareddy/raghava:service-type
+docker push raghavareddy/raghava:service-type
+docker tag ojas-obs-service-category  raghavareddy/raghava:service-category
+docker push raghavareddy/raghava:service-category
+docker tag ojas-obs-sar-status  raghavareddy/raghava:sar-status
+docker push raghavareddy/raghava:sar-status
+docker tag ojas-obs-project-tech-stack  raghavareddy/raghava:project-tech
+docker push raghavareddy/raghava:project-tech
+docker tag ojas-obs-project-task  raghavareddy/raghava:project-task
+docker push raghavareddy/raghava:project-task
+docker tag ojas-obs-perm-status  raghavareddy/raghava:perm-status
+docker push raghavareddy/raghava:perm-status
+docker tag ojas-obs-location-type  raghavareddy/raghava:location-type
+docker push raghavareddy/raghava:location-type
+docker tag ojas-obs-interview-result  raghavareddy/raghava:interview-result
+docker push raghavareddy/raghava:interview-result
+docker tag ojas-obs-interview-mode  raghavareddy/raghava:interview-mode
+docker push raghavareddy/raghava:interview-mode
+docker tag ojas-obs-delivery-location  raghavareddy/raghava:delivery-location
+docker push raghavareddy/raghava:delivery-location
+docker tag ojas-obs-c2h-status  raghavareddy/raghava:c2h-status
+docker push raghavareddy/raghava:c2h-status
+docker tag ojas-obs-budget  raghavareddy/raghava:budget
+docker push raghavareddy/raghava:budget
+docker tag ojas-obs-action-type  raghavareddy/raghava:action-type
+docker push raghavareddy/raghava:action-type
+docker tag ojas-obs-billing_type  raghavareddy/raghava:billing_type
+docker push raghavareddy/raghava:billing_type
+docker tag ojas-obs-action-owner  raghavareddy/raghava:action-owner
+docker push raghavareddy/raghava:action-owner
+docker tag ojas-obs-psa-project_info  raghavareddy/raghava:psa-project_info
+docker push raghavareddy/raghava:psa-project_info
+docker tag ojas-obs-timesheet-management  raghavareddy/raghava:timesheet
+docker push raghavareddy/raghava:timesheet
+docker tag ojas-obs-services  raghavareddy/raghava:services
+docker push raghavareddy/raghava:services
+docker tag ojas-obs-resignationdetails  raghavareddy/raghava:resignationdetails
+docker push raghavareddy/raghava:resignationdetails
+docker tag ojas-obs-reg-forgot  raghavareddy/raghava:reg-forgot
+docker push raghavareddy/raghava:reg-forgot
+docker tag ojas-obs-resetpassword  raghavareddy/raghava:resetpassword
+docker push raghavareddy/raghava:resetpassword
+docker tag ojas-obs-title  raghavareddy/raghava:title
+docker push raghavareddy/raghava:title
+docker tag ojas-obs-employeeinfo  raghavareddy/raghava:employeeinfo
+docker push raghavareddy/raghava:employeeinfo
+docker tag ojas-obs-kye  raghavareddy/raghava:kye
+docker push raghavareddy/raghava:kye
+docker tag ojas-obs-project-details  raghavareddy/raghava:project-details
+docker push raghavareddy/raghava:project-details
+docker tag ojas-obs-employment-details  raghavareddy/raghava:employment-details
+docker push raghavareddy/raghava:employment-details
+docker tag ojas-obs-employeeskills  raghavareddy/raghava:employeeskills
+docker push raghavareddy/raghava:employeeskills
+docker tag ojas-obs-employeecontactinfo  raghavareddy/raghava:employeecontactinfo
+docker push raghavareddy/raghava:employeecontactinfo
+docker tag ojas-obs-employeeexperiencedetails  raghavareddy/raghava:employeeexperiencedetails
+docker push raghavareddy/raghava:employeeexperiencedetails
+docker tag ojas-obs-empcertificationdetails  raghavareddy/raghava:empcertificationdetails
+docker push raghavareddy/raghava:empcertificationdetails
+docker tag ojas-obs-employeebu  raghavareddy/raghava:employeebu
+docker push raghavareddy/raghava:employeebu
+docker tag ojas-obs-dependentdetails  raghavareddy/raghava:dependentdetails
+docker push raghavareddy/raghava:dependentdetails
+docker tag ojas-obs-employee-education-details  raghavareddy/raghava:employee-education
+docker push raghavareddy/raghava:employee-education
+docker tag ojas-obs-bankdetails  raghavareddy/raghava:bankdetails
+docker push raghavareddy/raghava:bankdetails
+docker tag ojas-obs-skill  raghavareddy/raghava:skill
+docker push raghavareddy/raghava:skill
+docker tag ojas-obs-online-separationtype-service  raghavareddy/raghava:online-separationtype
+docker push raghavareddy/raghava:online-separationtype
+docker tag ojas-obs-designation  raghavareddy/raghava:designation
+docker push raghavareddy/raghava:designation
+docker tag ojas-obs-resource-type  raghavareddy/raghava:resource-type
+docker push raghavareddy/raghava:resource-type
+docker tag ojas-obs-states  raghavareddy/raghava:states
+docker push raghavareddy/raghava:states
+docker tag ojas-obs-gender  raghavareddy/raghava:gender
+docker push raghavareddy/raghava:gender
+docker tag ojas-obs-subbusinessunit  raghavareddy/raghava:subbusinessunit
+docker push raghavareddy/raghava:subbusinessunit
+docker tag ojas-obs-rolemanagement  raghavareddy/raghava:rolemanagement
+docker push raghavareddy/raghava:rolemanagement
+docker tag ojas-obs-educationtype  raghavareddy/raghava:educationtype
+docker push raghavareddy/raghava:educationtype
+docker tag ojas-obs-online-employeestatus-service  raghavareddy/raghava:employeestatus
+docker push raghavareddy/raghava:employeestatus
+docker tag ojas-obs-online-passport  raghavareddy/raghava:passport
+docker push raghavareddy/raghava:passport
+docker tag ojas-obs-online-gpa  raghavareddy/raghava:gpa
+docker push raghavareddy/raghava:gpa
+docker tag ojas-obs-businessunit  raghavareddy/raghava:businessunit
+docker push raghavareddy/raghava:businessunit
+docker tag ojas-obs-cost-center  raghavareddy/raghava:cost-center
+docker push raghavareddy/raghava:cost-center
+docker tag ui-server  raghavareddy/raghava:ui-server
+docker push raghavareddy/raghava:ui-server
+docker tag backend-service  raghavareddy/raghava:backend-service
+docker push raghavareddy/raghava:backend-service
+docker tag auth-center  raghavareddy/raghava:auth-center
+docker push raghavareddy/raghava:auth-center
+docker tag api-gateway  raghavareddy/raghava:api-gateway
+docker push raghavareddy/raghava:api-gateway
+docker tag maven  raghavareddy/raghava:maven
+docker push raghavareddy/raghava:maven
+ 

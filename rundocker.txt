@@ -1,0 +1,94 @@
+cat >>/etc/hosts<<EOF
+192.168.1.58 k8s-master
+192.168.1.59 k8s-worker-1
+ 
+EOF
+
+
+kubeadm join 192.168.1.58:6443 --token 6f11qa.l7u09wzjfi30ub3f \
+    --discovery-token-ca-cert-hash sha256:619d9930a7129b76bde182d6ba9f1feda4061eb3dc47b31199500acc569f555c
+
+
+
+https://banzaicloud.com/blog/k8s-taints-tolerations-affinities/
+
+[4:04 PM] Raja Manohar Bommala
+    
+
+docker run --rm -m 500M maven:3.6.0-jdk-8-alpine sh -c "java -XX:+PrintFlagsFinal -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -version | grep -Ei 'maxheapsize|maxram'"
+
+deploy:
+resources:
+limits:
+memory: 300m
+reservations:
+memory: 100m
+
+docker run -itd --name ojas-obs-customercontract -p 7098:7098 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-customercontract /bin/bash 
+docker run -itd --name ojas-obs-employeeinfo -p 8093:8093 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-employeeinfo /bin/bash
+docker run -itd --name ojas-obs-timesheet-management -p 7071:7071 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-timesheet-management /bin/bash
+docker run -itd --name ojas-obs-customer-info -p 7097:7097 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-customer-info /bin/bash 
+docker run -itd --name ojas-obs-bankdetails -p 9000:9000 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-bankdetails /bin/bash
+docker run -itd --name ojas-obs-interview-mode -p 7079:7079 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-interview-mode /bin/bash
+docker run -itd --name ojas-obs-budget -p 7076:7076 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-budget /bin/bash
+docker run -itd --name ojas-obs-subbusinessunit -p 8021:8021 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-subbusinessunit /bin/bash
+docker run -itd --name ojas-obs-perm-status -p 7082:7082 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-perm-status /bin/bash
+docker run -itd --name ojas-obs-interview-result -p 7080:7080 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-interview-result /bin/bash
+docker run -itd --name ojas-obs-employment-details -p 8084:8084 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-employment-details /bin/bash
+docker run -itd --name ojas-obs-document-stage -p 7095:7095 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-document-stage /bin/bash
+docker run -itd --name ojas-obs-contractcompany -p 7090:7090 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-contractcompany /bin/bash
+docker run -itd --name ojas-obs-online-employeestatus-service -p 80017:8017 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-online-employeestatus-service /bin/bash
+docker run -itd --name ojas-obs-delivery-location -p 7078:7078 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-delivery-location /bin/bash
+docker run -itd --name ojas-obs-cost-center -p 8013:8013 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-cost-center /bin/bash
+docker run -itd --name ojas-obs-geo -p 7092:7092 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-geo /bin/bash
+docker run -itd --name ojas-obs-location-type -p 7081:7081 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-location-type /bin/bash
+docker run -itd --name ojas-obs-service-type -p 7087:7087 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-service-type /bin/bash
+docker run -itd --name ojas-obs-action-owner -p 7073:7073 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-action-owner /bin/bash
+docker run -itd --name ojas-obs-project-tech-stack -p 7084:7084 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-project-tech-stack /bin/bash
+docker run -itd --name ojas-obs-businessunit -p 8015:8015 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-businessunit /bin/bash
+docker run -itd --name ojas-obs-gst-location -p 7093:7093 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-gst-location /bin/bash
+docker run -itd --name ojas-obs-country -p 7091:7091 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-country /bin/bash
+docker run -itd --name ojas-obs-documenttype -p 7096:7096 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-documenttype /bin/bash
+docker run -itd --name ojas-obs-designation -p 8011:8011 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-designation /bin/bash
+docker run -itd --name ojas-obs-c2h-status -p 7077:7077 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-c2h-status /bin/bash
+docker run -itd --name ojas-obs-employeeskills -p 8094:8094 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-employeeskills /bin/bash
+docker run -itd --name ojas-obs-sar-status -p 7085:7085 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-sar-status /bin/bash
+docker run -itd --name ojas-obs-resource-type -p 8022:8022 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-resource-type /bin/bash
+docker run -itd --name ojas-obs-employeecontactinfo -p 8091:8091 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-employeecontactinfo /bin/bash
+docker run -itd --name ojas-obs-resignationdetails -p 8099:8099 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-resignationdetails /bin/bash
+docker run -itd --name ojas-obs-states -p 8014:8014 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-states /bin/bash
+docker run -itd --name ojas-obs-action-type -p 7075:7075 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-action-type /bin/bash
+docker run -itd --name ojas-obs-gender -p 8010:8010 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-gender /bin/bash
+docker run -itd --name ojas-obs-rate_type -p 7088:7088 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-rate_type /bin/bash
+docker run -itd --name ojas-obs-online-separationtype-service -p 8019:8019 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-online-separationtype-service /bin/bash
+docker run -itd --name ojas-obs-billing_type -p 7074:7074 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-billing_type /bin/bash
+docker run -itd --name ojas-obs-sez-location -p 7094:7094 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-sez-location /bin/bash
+docker run -itd --name ojas-obs-psa-customercontactinfo -p 7099:7099 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-psa-customercontactinfo /bin/bash
+docker run -itd --name ojas-obs-service-category -p 7086:7086 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-service-category /bin/bash
+docker run -itd --name ojas-obs-psa-project_info -p 7072:7072 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-psa-project_info /bin/bash
+docker run -itd --name ojas-obs-skill -p 8023:8023 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-skill /bin/bash
+docker run -itd --name ojas-obs-sez -p 7089:7089 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-sez /bin/bash
+docker run -itd --name ojas-obs-project-task -p 7083:7083 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-project-task /bin/bash
+docker run -itd --name auth-center -p 8081:8081 -m 400M -e JAVA_OPTIONS='-Xmx300m' auth-center /bin/bash
+docker run -itd --name ui-server -p 8000:8000 -m 400M -e JAVA_OPTIONS='-Xmx300m' ui-server /bin/bash
+docker run -itd --name api-gateway -p 8089:8089 -m 400M -e JAVA_OPTIONS='-Xmx300m' api-gateway /bin/bash
+docker run -itd --name ojas-obs-online-passport -p 8012:8012 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-online-passport /bin/bash
+docker run -itd --name ojas-obs-online-gpa -p 8018:8018 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-online-gpa /bin/bash
+docker run -itd --name ojas-obs-educationtype -p 8016:8016 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-educationtype /bin/bash
+docker run -itd --name ojas-obs-rolemanagement -p 8020:8020 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-rolemanagement /bin/bash
+docker run -itd --name ojas-obs-employee-education-details -p 8525:8525 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-employee-education-details /bin/bash
+docker run -itd --name ojas-obs-dependentdetails -p 8090:8090 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-dependentdetails /bin/bash
+docker run -itd --name ojas-obs-employeebu -p 8087:8087 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-employeebu /bin/bash
+docker run -itd --name ojas-obs-empcertificationdetails -p 8888:8888 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-empcertificationdetails /bin/bash
+docker run -itd --name ojas-obs-employeeexperiencedetails -p 8092:8092 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-employeeexperiencedetails /bin/bash
+docker run -itd --name ojas-obs-project-details -p 8083:8083 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-project-details /bin/bash
+docker run -itd --name ojas-obs-kye -p 7070:7070 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-kye /bin/bash
+docker run -itd --name ojas-obs-title -p 8095:8095 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-title /bin/bash
+docker run -itd --name ojas-obs-resetpassword -p 8096:8096 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-resetpassword /bin/bash
+docker run -itd --name ojas-obs-reg-forgot -p 8088:8088 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-reg-forgot /bin/bash
+docker run -itd --name ojas-obs-services -p 8085:8085 -m 400M -e JAVA_OPTIONS='-Xmx300m' ojas-obs-kye /bin/bash
+ 
+
+ 
+
+

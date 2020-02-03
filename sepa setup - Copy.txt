@@ -1,0 +1,144 @@
+you need administrator privileges to do all this tasks
+
+1   System configuration
+    Updating Operating System:-
+	a)  yum update -y -- Updating all the packages to the current version.
+---------------------------------------------------------------------------
+2   Installing Database
+---------------------------------------------------------------------------
+	2a) Install Mariadb:-
+
+	a)  yum install mariadb-server
+	b)  systemctl status mariadb
+	c)  mysql
+	e)  Change db bind ip address, open the configuration file
+
+	    sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+	    bindipaddress=0.0.0.0
+	    GRANT ALL PRIVILEGES ON mydb.* TO myuser@'%' IDENTIFIED BY 'passwd';   
+	    FLUSH PRIVILEGES;    sudo su
+---------------------------------------------------------------------------
+3   Installing docker 
+---------------------------------------------------------------------------
+wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-17.12.1.ce-1.el7.centos.x86_64.rpm
+yum install container-selinux-2.36-1.gitff95335.el7.noarch.rpm docker-ce-17.12.1.ce-1.el7.centos.x86_64.rpm
+rpm -ivh container-selinux-2.36-1.gitff95335 .el7.noarch.rpm docker-ce-17.12.1.ce-1.el7.centos.x86_64.rpm
+systemctl enable docker
+systemctl start docker
+systemctl status docker
+
+---------------------------------------------------------------------------
+4 Installing node:-
+---------------------------------------------------------------------------
+	a)  curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+	b)  yum install nodejs
+	c)  node --version
+	    v10.13.0
+	d)  npm --version 6.4.1
+	e)  npm install --save-dev @angular-devkit/build-angular
+---------------------------------------------------------------------------
+5 INSTALLING GIT
+---------------------------------------------------------------------------
+yum install git -y
+
+AFTER WE HAVE TO PULL OUR CODE BY USING THIS COMMANDS
+
+git clone -b develop-sprint2 http://git.sepa-cyber.com/sepa/payvoo-web.git
+---------------------------------------------------------------------------
+6 IP ADDRESS CHANGES IN .ENV FOR KYB FILE:-
+---------------------------------------------------------------------------
+DBHOST=<<IPADDRESS>>
+DBUSER=<<USERNAME>>
+DBPORT=3306
+DBPASSWORD=<<PASSWORD>>
+DB=<<DB NAME>>
+MUSE_URL=<<IP ADDRESS>>
+KYB_PORT=5103 <<PORT NUBER FOR KYB MUSE SERVICE>>
+
+---------------------------------------------------------------------------
+7 IP ADDRESS CHANGES IN .ENV FOR KYC FILE:-
+---------------------------------------------------------------------------
+DBHOST=<<IPADDRESS>>
+DBUSER=<<USERNAME>>
+DBPORT=3306
+DBPASSWORD=<<PASSWORD>>
+DB=<<DB NAME>>
+MUSE_URL=<<IP ADDRESS>>
+
+       
+Shellscript file for both Muse and Payvoo web services:-
+	nano <filename>.sh
+
+---------------------------------------------------------------------------
+	create docker images for Payvooweb (for above serviceUrl Port):-
+---------------------------------------------------------------------------
+	cd <<repository>> path
+	docker build -t imagename .
+
+---------------------------------------------------------------------------
+	creating images for Muse services:-
+---------------------------------------------------------------------------
+	cd <<repository>> path
+	docker build -t imagename .
+	cd <<repository>> path
+	docker build -t imagename .
+	cd <<repository>> path
+	docker build -t imagename .
+	cd <<repository>> path
+	docker build -t imagename .
+
+	creating containers for docker images:-
+	nano docker-compose.yaml
+
+---------------------------------------------------------------------------
+yaml script
+---------------------------------------------------------------------------
+
+version: '3'
+
+services:
+  allservices:
+    image: imagename
+    ports:
+     - "5000:5000"
+services:
+  gateway:
+    image: imagename
+    ports:
+     - "5111:5111"
+services:
+  kybinitiation:
+    image: imagename
+    ports:
+     - "5222:5222"
+services:
+  kycidentid:
+    image: imagename
+    ports:
+     - "5102:5102"
+services:
+  sepakycstatus:
+    image: imagename
+    ports:
+     - "5105:5105"
+
+after the creation execute this command
+docker-compose up -d
+
+---------------------------------------------------------------------------
+Starting Angular Service:
+
+---------------------------------------------------------------------------
+  npm install
+  ng serve --host Ipaddress
+
+
+
+
+
+
+
+
+
+
+

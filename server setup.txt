@@ -1,0 +1,130 @@
+  Installation setup for OBS project:
+ =======================================
+
+ sudo apt-get update
+ sudo apt-get install nano curl wget vim -y
+
+
+ Installation of Java:
+------------------------------
+
+ sudo apt install openjdk-8-jdk -y
+ java -version
+
+ nano /etc/environment
+
+ (paste the below path)
+ nano 
+
+ (save and exit the file using below cmd)
+ ctrl+X and press y & Enter
+
+ source /etc/environment
+
+ echo $JAVA_HOME (check the java path)
+ 
+
+
+  Installation of maven:
+ ------------------------------
+
+ sudo apt-get install maven -y
+ mvn --version
+
+   
+ (paste the below path)
+
+ M2_HOME="/usr/share/maven"
+  
+
+ (save and exit the file using below cmd)
+ ctrl+X and press y & Enter
+
+ source /etc/environment
+ echo $M2_HOME (check the maven path)
+ 
+
+ Install of Git:
+---------------------
+ sudo apt-get install git -y
+ git --version
+
+   Docker :
+ --------------
+ curl -fsSL https://get.docker.com -o get-docker.sh
+ sh get-docker.sh
+ docker --version 
+
+ Docker-compose :
+----------------------
+ docker 
+ docker-compose --version
+
+ Installation of Nodejs:
+-----------------------------
+
+ sudo apt-get install curl
+ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
+ sudo apt-get install nodejs -y 
+ node -v
+ npm -v
+
+
+ Installation of mysql :
+---------------------------------------------
+ sudo apt-get -y install mysql*
+ mysql -u root -p
+ (ENTER ROOT PASSWD WHICH WE CREATE)
+ mysql> CREATE DATABASE artdb;
+
+ CREATE USER 'dbubora'@'%' IDENTIFIED BY 'Ojas-1525';
+
+ GRANT ALL PRIVILEGES ON *.* TO 'dbubora'@'%' IDENTIFIED BY 'Ojas-1525';
+ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'Ojas-1525';
+
+ FLUSH PRIVILEGES;
+ exit
+ nano /etc/mysql/mysql.conf.d/mysqld.cnf
+ change bind ip address 172.0.0.1 to 0.0.0.0
+ (press ctrl+X and press y & Enter)
+
+
+ Installation of jenkins:
+--------------------------------
+ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+ 
+ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+ sudo apt update 
+ sudo apt install jenkins
+ systemctl status jenkins
+ systemctl start jenkins
+
+ (Adjusting the firewall:)
+ sudo ufw allow 8080
+ sudo ufw status
+
+ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+ Copy the password from your terminal, paste it into the Administrator password 
+ field and click Continue.
+
+ Click on the Install suggested plugins box, and the installation 
+ process will start immediately.
+
+ Once the plugins are installed, you will be prompted to set up the first 
+ admin user. Fill out all required information and click Save and Continue.
+
+  Save and Finish
+
+ Click on the Start using Jenkins button and you will be redirected to the 
+ Jenkins dashboard logged in as the admin user you have
+ created in one of the previous steps.
+
+
+
+
+
+
+

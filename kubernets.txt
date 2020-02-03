@@ -1,0 +1,15 @@
+How to create a pod :
+
+https://www.youtube.com/watch?v=T6E2yzlEX0Q
+
+commands:
+kubectl create -f <pod.yaml>
+kubectl get pods
+kubectl describe pod podname
+kubectl delete pod podname
+kubectl run podname --image=imagename --port=80
+
+
+kubectl commands:
+
+https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#autoscale

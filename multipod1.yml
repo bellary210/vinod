@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multipod1
+spec:
+  selector:
+   matchLabels:
+     app: multipod1
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: multipod1   
+  spec:
+    containers:
+      - name: ojas-obs-country
+        image: bellary210/obs-hrms2:country
+        ports:
+        - containerPort: 7091
+      - name: ojas-obs-timesheet-management
+        image: bellary210/obs-hrms2:timesheet
+        ports:
+        - containerPort: 7071
+      - name: ui-server
+        image: bellary210/obs-hrms2:ui-server
+        ports:
+        - containerPort: 8000
+      - name: ojas-obs-employeeinfo
+        image: bellary210/obs-hrms2:employeeinfo
+        ports:
+        - containerPort: 8093
+      imagePullSecrets:
+      - name: regcred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name:  multipod1
+  labels:
+    name: multipod1
+spec:
+  ports:
+    - port: 6001
+      targetPort: 6001
+      protocol: TCP
+  selector:
+    app:  multipod1
+  type: NodePort
