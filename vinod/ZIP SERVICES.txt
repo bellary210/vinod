@@ -1,0 +1,22 @@
+FROM java:8
+MAINTAINER radhika.challa@ojas-it.com
+EXPOSE 6000
+WORKDIR ojas-obs-educationtype-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-designation-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-businessunit-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-cost-center-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-online-employeestatus-service-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-online-gpa-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-online-passport-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-online-separationtype-service-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-resource-type-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-rolemanagement-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-skill-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-states-0.0.1-SNAPSHOT.jar
+WORKDIR ojas-obs-subbusinessunit-0.0.1-SNAPSHOT.jar
+
+
+COPY ojas-obs-educationtype-0.0.1-SNAPSHOT.jar /opt/
+COPY ojas-obs-designation-0.0.1-SNAPSHOT.jar  /opt/
+ENTRYPOINT ["java", "-jar", "ojas-obs-educationtype.jar"]
+ENTRYPOINT ["java", "-jar", "ojas-obs-designation.jar"]

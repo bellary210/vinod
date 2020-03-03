@@ -1,0 +1,20 @@
+mvn clean install -U -Dspring.profiles.active=test -DGATEWAY_URL=192.168.1.155 -DDB_URL=192.168.1.155 -DDB_USER=dbubora -DDB_PWD=Ojas-1525
+
+
+sudo vi /etc/environment
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+
+
+source /etc/environment
+
+obs-hrms\zuul-auth-ojas-parent\ui-parent\ui-web\src\main\web\src\app\services\auth.service.ts  
+  \obs-hrms\zuul-auth-ojas-parent\ui-parent\ui-web\src\main\web\src\app\home\services\hrms.service.ts
+
+
+Jenkins job Creation and Project Deployment Steps : 
+
+    https://ojas-it.atlassian.net/wiki/spaces/OBS/pages/18972673/Jenkins+job+Creation+and+Project+Deployment+Steps
+
+Jenkins job export :   
+
+    https://bitbucket.org/rchallaojas/jenkins-job-export/src/master/

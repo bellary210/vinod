@@ -1,0 +1,42 @@
+
+ 1) Apache Tomcat install and jenkins war file deploy in tomact setup:
+
+    https://www.edureka.co/blog/install-jenkins/
+
+
+ 2) SCP comands and examples :(It is used to transfer thwe file from linux to linux)
+
+     https://www.tecmint.com/scp-commands-examples/
+
+
+
+ 3) Jenkins Installation
+
+    wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+    sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+    sudo apt-get update
+    sudo apt-get install jenkins
+    sudo apt-get status jenkins
+    sudo ufw allow 8080
+    
+    https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-install-jenkins-on-ubuntu-18-04-bionic-beaver/
+
+ 4) Docker install in windows and linux :
+  
+    https://runnable.com/docker/install-docker-on-windows-10
+
+ 5) mysql commands :
+
+    http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm
+   
+    http://www.zbeanztech.com/blog/important-mysql-commands
+
+ 6) complete build images and push into docker registry versionvise using jenkins and ansible.
+
+    https://www.youtube.com/watch?v=vU7K94Pt2yQ
+    
+    valaxy technologies videos
+
+    FTP :
+
+   https://wiki.jenkins.io/display/JENKINS/Publish+Over+FTP+Plugin

@@ -1,0 +1,76 @@
+#!/bin/bash
+
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/api-gateway/target/
+sudo cp -R api-gateway-1.0.0.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/auth-center/target
+sudo cp -R auth-center-1.0.0.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-bankdetails/target/
+sudo cp -R ojas-obs-bankdetails-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-businessunit/target/
+sudo cp -R ojas-obs-businessunit-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-cost-center/target/
+sudo cp -R ojas-obs-cost-center-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-dependentdetails/target/
+sudo cp -R ojas-obs-dependentdetails-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-designation/target/
+sudo cp -R ojas-obs-designation-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-educationtype/target/
+sudo cp -R ojas-obs-educationtype-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-empcertificationdetails/target/
+sudo cp -R ojas-obs-empcertificationdetails-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-employeebu/target/
+sudo cp -R ojas-obs-employeebu-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-employeecontactinfo/target/
+sudo cp -R ojas-obs-employeecontactinfo-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-employee-education-details/target/
+sudo cp -R ojas-obs-employee-education-details-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-employeeexperiencedetails/target/
+sudo cp -R ojas-obs-employeeexperiencedetails-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-employeeinfo/target/
+sudo cp -R ojas-obs-employeeinfo-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-employeeskills/target/
+sudo cp -R ojas-obs-employeeskills-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-employment-details/target/
+sudo cp -R ojas-obs-employment-details-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-gender/target/
+sudo cp -R ojas-obs-gender-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-kye/target/
+sudo cp -R ojas-obs-kye-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-online-employeestatus-service/target/
+sudo cp -R ojas-obs-online-employeestatus-service-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-online-gpa/target/
+sudo cp -R ojas-obs-online-gpa-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-online-passport/target/
+sudo cp -R ojas-obs-online-passport-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-online-separationtype-service/target/
+sudo cp -R ojas-obs-online-separationtype-service-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-project-details/target/
+sudo cp -R ojas-obs-project-details-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-reg-forgot/target/
+sudo cp -R ojas-obs-reg-forgot-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-resetpassword/target/
+sudo cp -R ojas-obs-resetpassword-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-resignationdetails/target/
+sudo cp -R ojas-obs-resignationdetails-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-resource-type/target/
+sudo cp -R ojas-obs-resource-type-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-rolemanagement/target/
+sudo cp -R ojas-obs-rolemanagement-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-skill/target/
+sudo cp -R ojas-obs-skill-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-states/target/
+sudo cp -R ojas-obs-states-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-subbusinessunit/target/
+sudo cp -R ojas-obs-subbusinessunit-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ojas-obs-title/target/
+sudo cp -R ojas-obs-title-0.0.1-SNAPSHOT.jar /opt/jars/
+cd /home/ojas/obs-hrms/zuul-auth-ojas-parent/ui-parent/ui-server/target
+sudo cp -R ui-server-0.0.1-SNAPSHOT.jar /opt/jars/
+
+
+
+#!/bin/bash
+ SRCDIR="/home/ojas/"
+ DESTDIR="/opt/builds/"
+ FILENAME=ug-$(date +%-Y%-m%-d)-$(date +%-T).tgz
+ tar --create --gzip --file=$DESTDIR$FILENAME $SRCDIR

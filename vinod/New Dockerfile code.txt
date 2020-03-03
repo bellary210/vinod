@@ -1,0 +1,58 @@
+
+FROM java:8
+MAINTAINER radhika.challa@ojas-it.com
+EXPOSE 6000
+WORKDIR educationtype.jar
+WORKDIR desigination.jar
+WORKDIR businessunit.jar
+WORKDIR costcenter.jar
+WORKDIR employeestatus.jar
+WORKDIR onlinegpa.jar
+WORKDIR passport.jar
+WORKDIR resourcetype.jar
+WORKDIR rolemanagement.jar
+WORKDIR seperationtype.jar
+WORKDIR skill.jar
+WORKDIR states.jar
+WORKDIR subbusinessunit.jar
+COPY educationtype.jar  educationtype.jar
+COPY desigination.jar   desigination.jar
+COPY businessunit.jar   businessunit.jar
+COPY costcenter.jar     costcenter.jar
+COPY employeestatus.jar employeestatus.jar
+COPY onlinegpa.jar      onlinegpa.jar
+COPY  passport.jar      passport.jar
+COPY resourcetype.jar   resourcetype.jar
+COPY rolemanagement.jar rolemanagement.jar
+COPY seperationtype.jar seperationtype.jar
+COPY skill.jar          skill.jar
+COPY states.jar         states.jar
+COPY subbusinessunit.jar subbusinessunit.jar
+ENTRYPOINT ["java", "-jar", "educationtype.jar"]
+ENTRYPOINT ["java", "-jar", "desigination.jar"]
+ENTRYPOINT ["java", "-jar", "businessunit.jar"]
+ENTRYPOINT ["java", "-jar", "costcenter.jar"]
+ENTRYPOINT ["java", "-jar", "employeestatus.jar"]
+ENTRYPOINT ["java", "-jar", "onlinegpa.jar"]
+ENTRYPOINT ["java", "-jar", "passport.jar"]
+ENTRYPOINT ["java", "-jar", "resourcetype.jar"]
+ENTRYPOINT ["java", "-jar", "rolemanagement.jar"]
+ENTRYPOINT ["java", "-jar", "seperationtype.jar"]
+ENTRYPOINT ["java", "-jar", "skill.jar"]
+ENTRYPOINT ["java", "-jar", "states.jar"]
+ENTRYPOINT ["java", "-jar", "subbusinessunit.jar"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

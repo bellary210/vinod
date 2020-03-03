@@ -1,0 +1,48 @@
+docker tag 28a219d1d93a raghavareddy/raghava:cost
+docker push raghavareddy/raghava:cost
+docker tag a6a53d6ec7dc  raghavareddy/raghava:empinfo
+docker push raghavareddy/raghava:empinfo
+docker tag 4c23a6354539  raghavareddy/raghava:businessunit
+docker push raghavareddy/raghava:businessunit
+docker tag 18b1b34826e4  raghavareddy/raghava:educationtype
+docker push raghavareddy/raghava:educationtype
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name:  payvooservices
+  labels:
+    name:  payvooservices
+spec:
+  ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP
+  selector:
+    app:  payvooservices
+  type: LoadBalancer
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: multiplepodsvc
+spec:
+  selector:
+    run: load-balancer-mul1
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 6060
+      targetPort: 6060
+
+
+#!/bin/bash
+cd obs-hrms/zuul-auth-ojas-parent/
+#cd /var/lib/jenkins/workspace/iptest/zuul-auth-ojas-parent/
+sudo sed -i 's/192.168.1.48/192.168.16.13/g' api-gateway/src/main/resources/application.yml
+
+#sudo sed -i 's/192.168.1.48/192.168.1.46/g' ui-parent/ui-web/src/main/web/src/app/home/services/hrms.service.ts
+#sudo sed -i 's/192.168.1.48/192.168.1.46/g' ui-parent/ui-web/src/main/web/src/app/services/auth.service.ts
+sudo sed -i 's/192.168.1.48/192.168.16.13/g' ui-parent/ui-web/src/main/web/src/environments/environment.ts

@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multipod2
+spec:
+  selector:
+   matchLabels:
+     app: multipod2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: multipod2   
+  spec:
+    containers:
+      - name: ojas-obs-customercontract
+        image: bellary210/obs-hrms2:customercontract
+        ports:
+        - containerPort: 7098
+      - name: ojas-obs-online-employeestatus-service
+        image: bellary210/obs-hrms2:employeestatus-service
+        ports:
+        - containerPort: 8017
+      - name: ojas-obs-cost-center
+        image: bellary210/obs-hrms2:cost-center
+        ports:
+        - containerPort: 8013
+      - name: ojas-obs-geo
+        image: bellary210/obs-hrms2:geo
+        ports:
+        - containerPort: 7092
+      - name: ojas-obs-resetpassword
+        image: bellary210/obs-hrms2:resetpassword
+        ports:
+        - containerPort: 8096
+      - name: ojas-obs-rolemanagement
+        image: bellary210/obs-hrms2:rolemanagement
+        ports:
+        - containerPort: 8020
+      - name: ojas-obs-sar-status
+        image: bellary210/obs-hrms2:sar-status
+        ports:
+        - containerPort: 7085
+      - name: ojas-obs-psa-customercontactinfo
+        image: bellary210/obs-hrms2:psa-customercontactinfo
+        ports:
+        - containerPort: 7099
+      - name: ojas-obs-online-separationtype-service
+        image: bellary210/obs-hrms2:online-separationtype-service
+        ports:
+        - containerPort: 8019
+      - name: ojas-obs-empcertificationdetails
+        image: bellary210/obs-hrms2:empcertificationdetails
+        ports:
+        - containerPort: 8888
+      imagePullSecrets:
+      - name: regcred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name:  multipod2
+  labels:
+    name: multipod2
+spec:
+  ports:
+    - port: 6002
+      targetPort: 6002
+      protocol: TCP
+  selector:
+    app:  multipod2
+  type: NodePort

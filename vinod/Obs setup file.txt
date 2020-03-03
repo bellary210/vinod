@@ -1,0 +1,36 @@
+kubeadm join 192.168.16.4:6443 --token i99pxq.ccwrpntj7hduns8i     --discovery-token-ca-cert-hash sha256:014b9dddcc4c8cae2630d25ec0b31088df98c4c417bee6ddab4070b52c1788a4
+
+
+sudo apt-get install openjdk-8*
+
+sudo apt install mysql-server
+sudo systemctl status mysql
+sudo mysql_secure_installation
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+apt-cache policy docker-ce
+sudo apt-get install -y docker-ce
+sudo systemctl status docker
+
+sudo apt update
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+systemctl status jenkins
+sudo ufw allow 8080
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+sudo apt-get insall git -y
+
+sudo apt install maven
+
+
+
+
