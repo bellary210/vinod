@@ -1,0 +1,23 @@
+#!/bin/bash
+
+FROM ubuntu:18.04
+FROM openjdk:8-jdk
+ENV CATALINA_HOME /opt/tomcat
+ENV PATH $CATALINA_HOME/bin:$PATH
+RUN mkdir -p "$CATALINA_HOME"
+WORKDIR $CATALINA_HOME
+
+ENV TOMCAT_VERSION 9.0.30
+RUN useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+ADD http://www.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz . 
+RUN tar -xf apache-tomcat-9.0.30.tar.gz
+RUN mv apache-tomcat-9.0.30/* /opt/tomcat/
+RUN rm -rf apa*
+
+
+RUN sed -i '44i <user username="tomcat" password="tomcat" roles="manager-gui,manager-script,admin-gui"/>' /opt/tomcat/conf/tomcat-users.xml
+
+
+
+EXPOSE 8080
+CMD ["catalina.sh","run"]
